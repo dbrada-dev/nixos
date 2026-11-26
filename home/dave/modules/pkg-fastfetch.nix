@@ -1,0 +1,71 @@
+{ ... }: {
+  programs.fastfetch = {
+    enable = true;
+    settings = {
+      "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
+
+      logo = {
+        type = "small";
+        padding = {
+          top = 1;
+          left = 2;
+          right = 2;
+        };
+      };
+
+      display = {
+        separator = "  ";
+      };
+
+      modules = [
+        "break"
+        {
+          type = "os";
+          key = "OS";
+          keyColor = "white";
+        }
+        {
+          type = "kernel";
+          key = "Kernel";
+          keyColor = "white";
+        }
+        {
+          type = "packages";
+          key = "Packages";
+          keyColor = "white";
+        }
+        {
+          type = "shell";
+          key = "Shell";
+          keyColor = "white";
+        }
+        {
+          type = "wm";
+          key = "WM";
+          keyColor = "white";
+        }
+        "break"
+        {
+          type = "cpu";
+          key = "CPU";
+          keyColor = "white";
+        }
+        {
+          type = "memory";
+          key = "RAM";
+          keyColor = "white";
+        }
+        {
+          type = "disk";
+          key = "Disk";
+          keyColor = "white";
+        }
+        {
+          type = "uptime";
+          key = "Uptime";
+          keyColor = "white";
+        }
+      ];
+    };
+  };
+}

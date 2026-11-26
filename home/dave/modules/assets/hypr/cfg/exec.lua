@@ -1,0 +1,15 @@
+-- █▀▀ ▀▄▀ █▀▀ █▀▀
+-- ██▄ █░█ ██▄ █▄▄
+hl.on("hyprland.start", function()
+  hl.exec_cmd("~/.config/hypr/xdg-portal-hyprland")
+	hl.exec_cmd("dbus-update-activation-environment --systemd --all")
+  hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+  hl.exec_cmd("systemctl --user start hyprpolkitagent")
+	hl.exec_cmd("systemctl --user start hyprland-session.target")
+	hl.exec_cmd("wl-paste -p --watch wl-copy -cp")
+  hl.exec_cmd("wlsunset -S 8:00 -s 20:00 -t 5000")
+  hl.exec_cmd("swayosd-server")
+  hl.exec_cmd("swaync")
+  hl.exec_cmd("swaybg -m fill -i ~/wallpapers/wp.jpg")
+  hl.exec_cmd("waybar")
+end)
