@@ -19,13 +19,15 @@
     ../../modules/srv-network_manager.nix
     ../../modules/srv-ssh_off.nix
     # System
-    ../../modules/sys-bootloader.nix
     ../../modules/sys-experimental.nix
+    ../../modules/sys-grub.nix
     ../../modules/sys-locale_prg.nix
     ../../modules/sys-shell.nix
     ../../modules/sys-sudo.nix
     ## System groups
     ../../modules/syg-tty.nix
+    ## Kernels
+    ../../modules/efi-cachy_uki.nix
     # Scripts
     ../../modules/bin-x86-toggle_pw_profile.nix
   ];

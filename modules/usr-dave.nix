@@ -1,4 +1,8 @@
 { ... }: {
+  imports = [
+    ./pkg-home_manager.nix
+  ];
+
   users.users.dave = {
     isNormalUser = true;
     description = "Dave";
