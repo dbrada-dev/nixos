@@ -14,7 +14,7 @@ local mainmod = "SUPER"
 -- █▀▄▀█ █ █▀ █▀▀
 -- █░▀░█ █ ▄█ █▄▄
 hl.bind(keys(mainmod, "M"), hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"), {locked = true})
-hl.bind(keys(mainmod, "SHIFT", "L"), function()
+hl.bind(keys(mainmod, "ALT", "L"), function()
   local current_opts = hl.get_config("input.kb_options") or ""
   local new_opts = ""
 
@@ -106,20 +106,20 @@ hl.bind(keys(mainmod, "T"), hl.dsp.window.float({action = "toggle"}))
 hl.bind(keys(mainmod, "CTRL", "space"), hl.dsp.layout("togglesplit"))
 hl.bind(keys(mainmod, "P"), hl.dsp.window.pseudo())
 
-hl.bind(keys(mainmod, "J"), hl.dsp.focus({direction = "l"}))
-hl.bind(keys(mainmod, "K"), hl.dsp.focus({direction = "r"}))
-hl.bind(keys(mainmod, "U"), hl.dsp.focus({direction = "u"}))
-hl.bind(keys(mainmod, "M"), hl.dsp.focus({direction = "d"}))
+hl.bind(keys(mainmod, "H"), hl.dsp.focus({direction = "l"}))
+hl.bind(keys(mainmod, "L"), hl.dsp.focus({direction = "r"}))
+hl.bind(keys(mainmod, "K"), hl.dsp.focus({direction = "u"}))
+hl.bind(keys(mainmod, "J"), hl.dsp.focus({direction = "d"}))
 
-hl.bind(keys(mainmod, "SHIFT", "J"), hl.dsp.window.move({direction = "l"}))
-hl.bind(keys(mainmod, "SHIFT", "K"), hl.dsp.window.move({direction = "r"}))
-hl.bind(keys(mainmod, "SHIFT", "U"), hl.dsp.window.move({direction = "u"}))
-hl.bind(keys(mainmod, "SHIFT", "M"), hl.dsp.window.move({direction = "d"}))
+hl.bind(keys(mainmod, "SHIFT", "H"), hl.dsp.window.move({direction = "l"}))
+hl.bind(keys(mainmod, "SHIFT", "L"), hl.dsp.window.move({direction = "r"}))
+hl.bind(keys(mainmod, "SHIFT", "K"), hl.dsp.window.move({direction = "u"}))
+hl.bind(keys(mainmod, "SHIFT", "J"), hl.dsp.window.move({direction = "d"}))
 
-hl.bind(keys(mainmod, "CTRL", "J"), hl.dsp.window.resize({x = -30, y = 0, relative = true}), {repeating = true})
-hl.bind(keys(mainmod, "CTRL", "K"), hl.dsp.window.resize({x = 30, y = 0, relative = true}), {repeating = true})
-hl.bind(keys(mainmod, "CTRL", "U"), hl.dsp.window.resize({x = 0, y = -30, relative = true}), {repeating = true})
-hl.bind(keys(mainmod, "CTRL", "M"), hl.dsp.window.resize({x = 0, y = 30, relative = true}), {repeating = true})
+hl.bind(keys(mainmod, "CTRL", "H"), hl.dsp.window.resize({x = -30, y = 0, relative = true}), {repeating = true})
+hl.bind(keys(mainmod, "CTRL", "L"), hl.dsp.window.resize({x = 30, y = 0, relative = true}), {repeating = true})
+hl.bind(keys(mainmod, "CTRL", "J"), hl.dsp.window.resize({x = 0, y = -30, relative = true}), {repeating = true})
+hl.bind(keys(mainmod, "CTRL", "K"), hl.dsp.window.resize({x = 0, y = 30, relative = true}), {repeating = true})
 
 -- █▀▄▀█ █▀▀ █▀▄ █ ▄▀█
 -- █░▀░█ ██▄ █▄▀ █ █▀█
